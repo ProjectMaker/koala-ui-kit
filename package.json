@@ -30,14 +30,19 @@
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-url": "^5.0.1",
     "@svgr/rollup": "^5.4.0",
+    "babel-loader": "^8.1.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "babel-preset-react-app": "^9.1.2",
     "postcss-url": "^8.0.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-styleguidist": "^11.1.0",
     "rollup": "^2.26.5",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-includepaths": "^0.2.4",
     "rollup-plugin-peer-deps-external": "^2.2.3",
-    "rollup-plugin-postcss": "^3.1.5"
+    "rollup-plugin-postcss": "^3.1.5",
+    "webpack": "^4.44.1"
   },
   "peerDependencies": {
     "react": "^16.8.0",
