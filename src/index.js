@@ -16,24 +16,23 @@ const validate = (values) => {
   )
 }
 
-const EditForm = (props) => {
-  return (
-    <form onSubmit={props.handleSubmit}>
-      <ul>
-        <li>
-          <TextInput name="firstname" />
-        </li>
-        <li>
-          <TextInput name="lastname" />
-        </li>
-        <li><button type="submit">Submit</button></li>
-      </ul>
-    </form>
-  )
-}
 export const Form = () => {
   return (
-    <FinalForm onSubmit={(e) => console.log(e)} validate={validate} render={formProps => <EditForm {...formProps} />} />
+    <FinalForm onSubmit={(e) => console.log(e)} validate={validate} >
+      {props => (
+        <form onSubmit={props.handleSubmit}>
+          <ul>
+            <li>
+              <TextInput name="firstname" />
+            </li>
+            <li>
+              <TextInput name="lastname" />
+            </li>
+            <li><button type="submit">Submit</button></li>
+          </ul>
+        </form>
+      )}
+    </FinalForm>
   )
 }
 
