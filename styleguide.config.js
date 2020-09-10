@@ -24,8 +24,24 @@ module.exports = {
 
     return `import { ${name} } from '${pkg.name}';`
   },
+  moduleAliases: {
+    'koala-ui-kit': path.resolve(__dirname, 'src'),
+    'styleguide': path.resolve(__dirname, 'styleguide')
+  },
   sections: [
     {
+      name: 'Foundation',
+      description: 'Colors, spacing, and typography are the building blocks of the design system and are often referred to as design tokens. <br/>' +
+        'Design tokens are named entities that store visual design attributes.',
+      sections: [
+        {
+          name: 'Colors',
+          content: 'styleguide/docs/foundation.md',
+          usageMode: 'hide', // 'hide' | 'collapse' | 'expand',
+          exampleMode: 'hide'
+        }
+      ]
+    }, {
       name: 'Inputs',
       components: 'src/components/inputs/**/[A-Z]*.js',
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'

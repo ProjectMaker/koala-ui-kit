@@ -34,6 +34,7 @@
     "babel-loader": "^8.1.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "babel-preset-react-app": "^9.1.2",
+    "classnames": "^2.2.6",
     "postcss-url": "^8.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.0",
