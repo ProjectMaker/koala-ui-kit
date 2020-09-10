@@ -6,6 +6,7 @@
   "module": "dist/index.es.js",
   "scripts": {
     "start": "NODE_ENV=development BABEL_ENV=development rollup -c -w",
+    "styleguide:build": "npx styleguidist build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
