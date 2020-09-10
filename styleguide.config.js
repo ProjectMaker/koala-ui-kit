@@ -7,6 +7,41 @@ module.exports = {
   moduleAliases: {
     [pkg.name]: path.resolve(__dirname, 'src'),
   },
+  theme: {
+    color: {
+      link: '#065fd4',
+      linkHover: '#00adef',
+    },
+    font: ['Roboto'],
+  },
+  exampleMode: 'expand',
+  usageMode: 'expand',
+  getExampleFilename(componentPath) {
+    return componentPath.replace(/\.(jsx?|tsx?)$/, '.examples.md')
+  },
+  getComponentPathLine(componentPath) {
+    const name = path.basename(componentPath, '.js')
+
+    return `import { ${name} } from '${pkg.name}';`
+  },
+  template: {
+    head: {
+      links: [
+        {
+          rel: 'stylesheet',
+          href:
+            'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
+        }, {
+          rel: 'stylesheet',
+          href:
+            'https://fonts.googleapis.com/icon?family=Material+Icons'
+        }
+      ]
+    }
+  },
+  styleguideComponents: {
+    // SectionsRenderer: path.join(__dirname, 'styleguide/components/SectionsRenderer'),
+  },
   webpackConfig: {
     module: {
       rules: [
@@ -29,8 +64,5 @@ module.exports = {
         }
       ]
     }
-  },
-  getExampleFilename(componentPath) {
-    return componentPath.replace(/\.(jsx?|tsx?)$/, '.examples.md')
-  },
+  }
 }
