@@ -26,7 +26,7 @@ module.exports = {
   },
   moduleAliases: {
     'koala-ui-kit': path.resolve(__dirname, 'src'),
-    'styleguide': path.resolve(__dirname, 'styleguide')
+    'styleguide': path.resolve(__dirname, 'docs')
   },
   sections: [
     {
@@ -36,7 +36,7 @@ module.exports = {
       sections: [
         {
           name: 'Colors',
-          content: 'styleguide/docs/foundation.md',
+          content: 'docs/foundation.md',
           usageMode: 'hide', // 'hide' | 'collapse' | 'expand',
           exampleMode: 'hide'
         }
