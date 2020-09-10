@@ -36,4 +36,5 @@ export const Form = () => {
   )
 }
 
-
+export * from './components/inputs'
+export * from './components/navigation'
