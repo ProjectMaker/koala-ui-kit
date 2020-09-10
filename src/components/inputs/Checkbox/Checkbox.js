@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import { default as UICheckbox } from '@material-ui/core/Checkbox'
 
-const Checkbox = ({name, label, checked}) => {
+const Checkbox = ({name, label, checked, onChange}) => {
   return (
     <FormControlLabel
       control={
         <UICheckbox
           checked={checked}
-          onChange={() => {}}
+          onChange={onChange}
           name={name}
         />
       }
