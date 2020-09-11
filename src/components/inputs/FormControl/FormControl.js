@@ -12,7 +12,7 @@ const FormControl = ({name, children}) => {
           children,
           {
             ...input,
-            errors: getErrorMessages(meta)
+            errors: getErrorMessages(meta).join('<br/>')
           },
           null
         )

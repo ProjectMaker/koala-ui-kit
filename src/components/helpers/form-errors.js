@@ -3,7 +3,7 @@ export const isInputWithError = meta => {
 }
 
 export const getErrorMessages = (meta) => {
-  if (!isInputWithError(meta)) return ''
+  if (!isInputWithError(meta)) return []
   const messages = [];
 
   (meta.error || []).forEach(error =>
