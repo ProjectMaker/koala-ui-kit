@@ -2,11 +2,12 @@ export const isInputWithError = meta => {
   return !!(meta.touched && (meta.error || meta.submitError))
 }
 
-const getErrorMessages = (meta, t) => {
+export const getErrorMessages = (meta) => {
+  if (!isInputWithError(meta)) return ''
   const messages = [];
 
   (meta.error || []).forEach(error =>
-    messages.push(getErrorMessage(error, t))
+    messages.push(getErrorMessage(error))
   );
 
   (meta.submitError || []).forEach(error =>
@@ -24,10 +25,4 @@ const getErrorMessage = (error) => {
   }
 
   return message
-}
-
-export const InputError = meta => {
-  if (!isInputWithError(meta)) return null
-
-  return getErrorMessages(meta).join(', ')
 }

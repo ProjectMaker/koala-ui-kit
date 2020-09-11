@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { TextField as UITextField } from "@material-ui/core"
 
-const TextField = (fieldProps) => {
+const TextField = ({errors, ...props}) => {
   return (
-    <UITextField {...fieldProps} />
+    <UITextField error={errors.length > 0} helperText={errors} {...props}/>
   )
 }
 
@@ -12,10 +12,10 @@ TextField.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
   variant: PropTypes.oneOf(['filled', 'outlined']),
-  error: PropTypes.bool
+  errors: PropTypes.string
 }
 
 TextField.defaultProps = {
-  error: false
+  errors: ''
 }
 export default TextField

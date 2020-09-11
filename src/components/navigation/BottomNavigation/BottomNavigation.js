@@ -9,7 +9,7 @@ const BottomNavigation = ({onChange, value, actions}) => {
       onChange={onChange}
       showLabels
     >
-      {actions.map(action => <BottomNavigationAction label={action.label} />)}
+      {actions.map((action, idx) => <BottomNavigationAction label={action.label} key={idx}/>)}
     </UIBottomNavigation>
   );
 }
