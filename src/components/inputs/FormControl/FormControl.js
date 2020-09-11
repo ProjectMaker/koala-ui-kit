@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Field } from 'react-final-form'
 
-import { getErrorMessages } from '../helpers/helper-errors'
+import { getErrorMessages } from '../../helpers/form-errors'
 
 const FormControl = ({name, children}) => {
   return (

@@ -45,7 +45,7 @@ module.exports = {
       name: 'Inputs',
       components: 'src/components/inputs/**/[A-Z]*.js',
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
-      usageMode: 'expand' // 'hide' | 'collapse' | 'expand'
+      usageMode: 'collapse' // 'hide' | 'collapse' | 'expand'
     }, {
       name: 'Navigation',
       components: 'src/components/navigation/**/[A-Z]*.js',
