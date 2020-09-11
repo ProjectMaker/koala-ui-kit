@@ -1,5 +1,6 @@
 ```jsx
-import { Form, Validator, FormControl, TextField } from 'koala-ui-kit'
+import { Form, Validator, FormControl, TextField, theme } from 'koala-ui-kit'
+import { ThemeProvider } from '@material-ui/styles';
 import Button from '@material-ui/core/Button'
 
 const settingValidator = values => (
@@ -14,18 +15,19 @@ const validate = (values) => {
     values
   )
 }
-
-<Form validate={validate} onSubmit={validate}>
-  <div>
-    <FormControl name="firstname">
-      <TextField label="Firstname" placeholder="John" />
-    </FormControl>
-    <br />
-    <FormControl name="lastname">
-      <TextField label="Lastname" placeholder="Doe" />
-    </FormControl>
-    <br /><br />
-    <Button color="primary" variant="outlined" type="submit">Submit</Button>
-  </div>
-</Form>
+<ThemeProvider theme={theme}>
+    <Form validate={validate} onSubmit={validate}>
+      <div>
+        <FormControl name="firstname">
+          <TextField label="Firstname" placeholder="John" />
+        </FormControl>
+        <br />
+        <FormControl name="lastname">
+          <TextField label="Lastname" placeholder="Doe" />
+        </FormControl>
+        <br /><br />
+        <Button color="primary" variant="outlined" type="submit">Submit</Button>
+      </div>
+    </Form>
+</ThemeProvider>
 ```

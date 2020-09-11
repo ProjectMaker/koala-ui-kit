@@ -4,7 +4,7 @@ import { TextField as UITextField } from "@material-ui/core"
 
 const TextField = ({errors, ...props}) => {
   return (
-    <UITextField error={errors.length > 0} helperText={errors} {...props}/>
+    <UITextField error={errors.length > 0} helperText={errors} {...props} size="small" margin="dense"  fullWidth />
   )
 }
 

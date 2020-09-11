@@ -4,9 +4,9 @@ import { Field } from 'react-final-form'
 
 import { getErrorMessages } from '../../helpers/form-errors'
 
-const FormControl = ({name, children}) => {
+const FormControl = ({name, type, children}) => {
   return (
-    <Field name={name}>
+    <Field name={name} type={type}>
       {({input, meta}) => {
         return React.cloneElement(
           children,
@@ -23,7 +23,8 @@ const FormControl = ({name, children}) => {
 
 FormControl.propTypes = {
   name: PropTypes.string.isRequired,
-  children: PropTypes.react.Node.isRequired
+  children: PropTypes.react.Node.isRequired,
+  type: PropTypes.string
 }
 
 export default FormControl
