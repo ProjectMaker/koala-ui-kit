@@ -1,10 +1,11 @@
 import React from 'react'
 import { createMuiTheme } from '@material-ui/core/styles'
+export {default as Grid} from '@material-ui/core/Grid';
 
 export * from './components/inputs'
 export * from './components/navigation'
 export { default as PortalAdmin } from './components/examples/PortalAdmin'
-
+export { default as PortalFront } from './components/examples/PortalFront'
 const theme = createMuiTheme({
   palette: {
     primary: {

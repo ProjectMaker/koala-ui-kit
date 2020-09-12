@@ -73,7 +73,6 @@ export default () => (
               <Checkbox label="RAN gratuit" />
             </FormControl>
             <br /><br />
-            <Button variant="contained" color="secondary" type="submit">Submit</Button>
         </CardContent>
       </Card>
       <br /><br />
@@ -93,7 +92,7 @@ export default () => (
       </Card>
         <SubmitBar>
           <Button variant="contained" color="secondary">Retour</Button>
-          <Button variant="contained" color="secondary">Publier</Button>
+          <Button variant="contained" color="secondary" type="submit">Publier</Button>
         </SubmitBar>
     </div>
   </Form>
