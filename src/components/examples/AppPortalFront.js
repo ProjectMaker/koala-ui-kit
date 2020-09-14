@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button'
 import CardHeader from './CardHeader';
 import SubmitBar from './SubmitBar';
 
-import View from './PortalFront/View'
+import PortalFront  from './PortalFront'
 
 const settingValidator = values => []
 
@@ -50,6 +50,6 @@ const theme = createMuiTheme({
 
 export default () => (
   <ThemeProvider theme={theme}>
-    <View/>
+    <PortalFront />
   </ThemeProvider>
 )

@@ -59,7 +59,7 @@ const useStyles = makeStyles(theme => console.log(theme) || createStyles({
 const FragmentDivider = () => {
   const classes = useStyles()
   return (
-    <Box display="flex" alignItems="center" mt={6} mb={6}>
+    <Box display="flex" alignItems="center" mt={3} mb={3}>
       <Box flexGrow={1}><Divider /></Box>
       <Box ml={4} mr={4}><Typography>OR</Typography></Box>
       <Box flexGrow={1}><Divider /></Box>

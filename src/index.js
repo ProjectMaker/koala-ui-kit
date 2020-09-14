@@ -4,8 +4,9 @@ export {default as Grid} from '@material-ui/core/Grid';
 
 export * from './components/inputs'
 export * from './components/navigation'
-export { default as PortalAdmin } from './components/examples/PortalAdmin'
-export { default as PortalFront } from './components/examples/PortalFront'
+
+export { default as AppPalette } from './components/examples/AppPalette'
+
 const theme = createMuiTheme({
   palette: {
     primary: {
